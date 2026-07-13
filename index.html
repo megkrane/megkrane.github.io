@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meg Krane</title>
+<style>
+  :root {
+    --card-bg: rgba(20, 24, 20, 0.55);
+    --text: #f5f3ee;
+    --accent: #d9c9a3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    background: var(--card-bg);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: var(--text);
+    padding: 2.5rem 2.75rem;
+    border-radius: 14px;
+    max-width: 480px;
+    width: 90%;
+    margin: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .tagline {
+    margin: 0 0 1.25rem 0;
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  p.bio {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .links a {
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .links a:hover {
+    background: var(--accent);
+    color: #1a1a1a;
+  }
+
+  footer {
+    margin-top: 1.75rem;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Meg Krane</h1>
+    <p class="tagline">Oakland, CA</p>
+
+    <p class="bio">
+      Hi, I'm Meg — a backpacker, runner, and dog person based in the Bay Area.
+      I spend as much time as I can in the mountains, volunteer with a senior
+      dog rescue, and dabble in watercolor between trips.
+    </p>
+
+    <div class="links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://github.com/megkrane" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <footer>&copy; 2026 Meg Krane</footer>
+  </div>
+
+<script>
+  // Add your own filenames here — one will be picked at random on every page load.
+  const images = [
+    "images/photo1.jpg",
+    "images/photo2.jpg",
+    "images/photo3.jpg",
+    "images/photo4.jpg"
+  ];
+
+  const chosen = images[Math.floor(Math.random() * images.length)];
+  document.body.style.backgroundImage = `url('${chosen}')`;
+</script>
+
+</body>
+</html>
